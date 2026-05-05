@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Top Up Game</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial;
+  background:#0f172a;
+  color:white;
+  text-align:center;
+}
+button{
+  padding:10px;
+  margin:5px;
+  background:#7c3aed;
+  color:white;
+  border:none;
+  border-radius:8px;
+}
+input{
+  padding:10px;
+  width:80%;
+  margin:5px;
+  border-radius:8px;
+  border:none;
+}
+</style>
+</head>
+
+<body>
+
+<h2>TOP UP GAME ⚡</h2>
+
+<p>ID Game:</p>
+<input id="id" placeholder="Masukkan ID">
+
+<p>Pilih Nominal:</p>
+<button onclick="pilih('86 DM')">86 💎</button>
+<button onclick="pilih('172 DM')">172 💎</button>
+
+<br><br>
+<button onclick="order()">BELI SEKARANG</button>
+
+<script>
+let nominal="";
+function pilih(n){
+  nominal=n;
+  alert("Dipilih: "+n);
+}
+
+function order(){
+  let id=document.getElementById("id").value;
+  let text=`Top up\nID:${id}\nNominal:${nominal}`;
+  window.location.href="https://wa.me/628XXXXXXXXXX?text="+encodeURIComponent(text);
+}
+</script>
+
+</body>
+</html>
